@@ -12,8 +12,8 @@ const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
 
 // Load Config
-dotenv.config({ path: './config.env'});
-const PORT = process.env.PORT || 3000
+dotenv.config({ path: './config/config.env' });
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 connectDB();
@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'development') {
 
 // Session middleware
 app.use(session({
-    secret: process.env.SECRET,
+    secret: process.env.SECRET|| 'lancedoesepo',
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
