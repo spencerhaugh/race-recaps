@@ -1,4 +1,4 @@
-# Race RaCaps  
+# Race ReCaps  
 A Mirco Journalism blog site 
 ## Overview 
 This is a micro blogging app for post-event recaps from participants to share the experience with fans, and each other.  
