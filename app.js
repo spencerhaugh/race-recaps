@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'development') {
 
 // Session middleware
 app.use(session({
-    secret: process.env.SECRET|| 'lancedoesepo',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
