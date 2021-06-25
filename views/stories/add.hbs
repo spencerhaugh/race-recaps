@@ -1,0 +1,34 @@
+<h3>What's Your Story?</h3>
+<div class="row">
+    <form action="/stories" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="title" id="title" placeholder="Enter A Title...">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select name="status" id="status">
+                    <option value="public" selected>Public</option>
+                    <option value="unpublished">Unpublished</option>
+                </select>
+                <label for="status">Status <i class="tiny material-icons tooltipped" data-position="right" data-tooltip="Unpublished ReCaps are only visable to you">error_outline</i></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <h5>Create your ReCap:</h5>
+                <textarea name="body" id="body"></textarea>
+                <label for="body"></label>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn green">
+            <a href="/dashboard" class="btn grey">Cancel</a>
+        </div>
+    </form>
+</div>

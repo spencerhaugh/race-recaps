@@ -1,0 +1,38 @@
+body {
+    background: #eee;
+}
+
+/* Login */
+.login-container {
+    width: 400px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.fa-small {
+    font-size: 1rem !important;
+}
+
+.btn-float {
+    float: left;
+    margin-right: 10px;
+}
+#profile {
+    margin-top: 7rem;
+}
+small {
+    font-size: 1rem;
+}
+.chip a {
+    color: #64b5f6;
+}
+#more-link {
+    color: #64b5f6;
+}
+#dash-link {
+    margin-right: auto;
+}

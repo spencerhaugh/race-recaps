@@ -1,0 +1,29 @@
+<div class="row s12">
+    <h1>Latest ReCaps</h1>
+    <a href="/dashboard" class="btn red tooltipped" data-position="right" data-tooltip="Back to your dashboard" id="dash-link">Dashboard</a>
+</div>
+<div class="row">
+    {{#each stories}}
+    <div class="col s12 m6 l4">
+        <div class="card hoverable">
+            <div class="card-image">
+                {{{editIcon user ../user _id}}}
+            </div>
+            <div class="card-content center-align">
+                <h5>{{title}}</h5>
+                <p>{{stripTags (truncate body 120)}}</p>
+                <br>
+                <div class="chip">
+                    <img src="{{user.image}}" alt="profile picture">
+                    <a href="/stories/user/{{user._id}}">{{user.displayName}}</a>
+                </div>
+            </div>
+            <div class="card-action center-align">
+                <a href="/stories/{{_id}}" class="btn blue lighten-1">Read More</a>
+            </div>
+        </div>
+    </div>
+    {{else}}
+        <p>No recaps yet!</p>
+    {{/each}}
+</div>
