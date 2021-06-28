@@ -4,8 +4,8 @@
   "description": "Micro Blogging app",
   "main": "app.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production node app",
-    "start": "cross-env NODE_ENV=production npm start",
+    "build": "cross-env NODE_ENV=production npm install",
+    "start": "cross-env NODE_ENV=production node app.js",
     "dev": "cross-env NODE_ENV=development nodemon app"
   },
   "keywords": [],
