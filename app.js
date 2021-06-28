@@ -13,7 +13,8 @@ const connectDB = require('./config/db');
 
 // Load Config
 dotenv.config({ path: './config/config.env' });
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT
+if (PORT === null || PORT === '') PORT = 3000;
 
 const app = express();
 connectDB();
