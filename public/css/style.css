@@ -1,7 +1,9 @@
 body {
     background: #eee;
 }
-
+.card {
+    margin-top: 2rem;
+}
 /* Login */
 .login-container {
     width: 400px;
