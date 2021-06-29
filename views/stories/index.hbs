@@ -10,8 +10,8 @@
                 {{{editIcon user ../user _id}}}
             </div>
             <div class="card-content center-align">
-                <h5>{{title}}</h5>
-                <p>{{stripTags (truncate body 120)}}</p>
+                <h5>{{truncate title 30}}</h5>
+                <p>{{stripTags (truncate body 150)}}</p>
                 <br>
                 <div class="chip">
                     <img src="{{user.image}}" alt="profile picture">
