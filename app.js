@@ -12,7 +12,7 @@ const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
 
 // Load Config
-dotenv.config({ path: './config/config.env' });
+dotenv.config({ path: './config.env' });
 const PORT = process.env.PORT ? process.env.PORT : 3000;
 
 const app = express();
@@ -29,7 +29,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.MONGO_URI }),
-})); 
+}));
 
 // Passport config
 require('./config/passport')(passport);
@@ -70,11 +70,11 @@ app.use(function (req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')))
 
 // Routes
-    // Index
+// Index
 app.use('/', require('./routes/index'))
-    // Auth
+// Auth
 app.use('/auth', require('./routes/auth'))
-    // Story
+// Story
 app.use('/stories', require('./routes/stories'))
 
 
